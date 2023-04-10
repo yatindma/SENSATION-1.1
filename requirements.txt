@@ -1,0 +1,7 @@
+fastseg
+huggingface-hub
+pillow
+datasets
+tqdm
+scikit-image
+opencv-python
