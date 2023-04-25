@@ -1,5 +1,5 @@
 import torch
-from Train.dataset import load_sidewalk_dataset
+from dataset import load_sidewalk_dataset
 from train import train_model
 import fastseg as fs
 
@@ -11,8 +11,8 @@ train_ds, val_ds, num_labels = load_sidewalk_dataset(dataset_path)
 model = fs.MobileV3Large(num_classes=num_labels)
 
 # Set up training hyper-parameters
-batch_size = 50
-num_epochs = 1
+batch_size = 18
+num_epochs = 50
 
 # Use the DataLoader to load your datasets
 train_loader = torch.utils.data.DataLoader(train_ds, batch_size=batch_size, shuffle=True)
